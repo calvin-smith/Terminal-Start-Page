@@ -1,0 +1,185 @@
+@font-face {
+	font-family: 'fira';
+	src:  url('FiraCode-Retina.ttf') format('ttf'),
+	local('FiraCode-Retina');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'fira';
+	src:  url('FiraCode-Light.ttf') format('ttf'),
+	local('FiraCode-Light');
+	font-style: normal;
+	font-weight: lighter;
+
+}
+
+
+html, body{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	box-sizing: border-box;
+	background-color: #282c34;
+  	color: #abb2bf;
+
+}
+
+
+*, *:before, *:after {
+	font-family: 'fira';
+	font-weight: lighter;
+	box-sizing:inherit;
+}
+
+.container {
+	width: 50%;
+	/*margin: 50px auto;*/
+	position: relative;
+	border: 1px orange;
+}
+
+#all-link-tables {
+	width: 100%;
+	position: absolute;
+	top: 30%;
+}
+
+#terminal {
+	width: 100%;
+	position: absolute;
+}
+
+dt  {
+    clear:left;
+    float:left;
+    font-size:12px;
+    line-height:26px;
+    width:70px;
+}
+
+dd {
+    clear:right;
+    font-size:12px;
+    line-height:18px;
+    padding:4px 0 4px 40px;
+}
+
+.all-links {
+	padding: 20px 0px 20px 0px;
+	background: teal;
+}
+
+.link-group {
+	margin-bottom: 20px;
+	background: gold;
+}
+
+a:before {
+	content: '';
+	display: block;
+	padding-bottom: 5px;
+}
+
+a {
+text-decoration: none;
+}
+
+.ls-table {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	display: block;
+	padding-bottom: 25px;
+}
+
+td {
+    padding: 1px;
+    text-align: left;
+  }
+
+.row-permissions {
+	color: #c678dd;
+	text-align: left;
+}
+
+.row-links {
+  	color: #56b6c2;
+	padding-left: 10px;
+	text-align: right;
+}
+
+.row-user {
+  	color: #d19a66;
+	padding-left: 10px;
+	text-align: left;
+}
+
+.row-group {
+  	color: #e06c75;
+	padding-left: 10px;
+	text-align: left;
+}
+
+.row-filesize {
+  	color: #56b6c2;
+	padding-left: 10px;
+	text-align: right;
+}
+
+.row-date {
+   	color: #98c379;
+	padding-left: 10px;
+	text-align: left;
+}
+
+.row-name {
+	padding-left: 10px;
+	text-align: left;
+}
+
+.ls-header {
+	padding-bottom: 8px;
+}
+
+.ls-link {
+  color: #d19a66;
+
+}
+
+.ls-command-float {
+	display: inline-block;
+	width: auto;
+	padding-bottom: 10px;
+}
+
+.ls-command {
+	width: 100%;
+}
+
+.ls-command-username {
+	color: #c678dd;
+}
+
+.ls-command-at {
+
+}
+
+.ls-command-devicename {
+  color: #61afef;
+}
+
+.ls-command-ls {
+	padding-left: 10px;
+   	color: #98c379;
+}
+
+.ls-command-path {
+ padding-left: 10px;
+  color: #d19a66;
+}
+
+.ls-command-grouptitle {
+  	color: #e5c07b;
+}
+

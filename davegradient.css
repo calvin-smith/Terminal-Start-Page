@@ -1,0 +1,94 @@
+/** Created by Dave Lunny in the beautiful year 2015
+  *   himynameisdave.com | @dave_lunny
+  */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+*:focus {
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.button {
+  background-size: 100%;
+  background-image: -webkit-linear-gradient(#fff, #ccc);
+  background-image: linear-gradient(#fff, #ccc);
+  position: relative;
+  z-index: 100;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.45rem;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  color: #333;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.725rem 0.975rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.button:before {
+  border-radius: inherit;
+  background-image: -webkit-linear-gradient(#ccc, #fff);
+  background-image: linear-gradient(#ccc, #fff);
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -100;
+  -webkit-transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out;
+}
+.button:hover:before {
+  opacity: 1;
+}
+.button:active:before {
+  opacity: 0;
+}
+@media all and (min-width: 480px) {
+  .button {
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+  }
+}
+body {
+  background-size: 100%;
+  background-image: -webkit-linear-gradient(#61afef, #282c34);
+  background-image: linear-gradient(#61afef, #282c34);
+  position: relative;
+  z-index: 100;
+}
+body:before {
+  border-radius: inherit;
+  background-image: -webkit-linear-gradient(#282c34, #61afef);
+  background-image: linear-gradient(#282c34, #61afef);
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -100;
+  -webkit-transition: opacity 2.75s ease-in-out;
+  transition: opacity 2.75s ease-in-out;
+}
+body:hover:before {
+  opacity: 1;
+}
