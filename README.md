@@ -1,6 +1,6 @@
 # Terminal-Start-Page
 
-
+![Terminal-Start-Page-Screenshot](http://i.imgur.com/5nLejK3.jpg)
 
 > A terminal-like start page.
 
