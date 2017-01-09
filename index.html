@@ -12,15 +12,6 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="pedroterminal.js"></script>
 	<script src="./script.js"></script>
-	<script type="text/javascript" src="./vimium/lib/utils.js"></script>
-	<script type="text/javascript" src="./vimium/lib/keyboard_utils.js"></script>
-	<script type="text/javascript" src="./vimium/lib/dom_utils.js"></script>
-	<script type="text/javascript" src="./vimium/lib/handler_stack.js"></script>
-	<script type="text/javascript" src="./vimium/lib/clipboard.js"></script>
-	<script type="text/javascript" src="./vimium/pages/ui_component_server.js"></script>
-	<script type="text/javascript" src="./vimium/pages/vomnibar.js"></script>
-	<link rel="stylesheet" type="text/css" href="./vimium/content_scripts/vimium.css" />
-	<link rel="stylesheet" type="text/css" href="./vimium/pages/vomnibar.css" />
 </head>
 
 <body>
@@ -32,38 +23,33 @@
 				<span class="control-item control-close js-close">˟</span>
 			</nav>
 		</header>
-		<main class="window-content">
-			<div class="container">
-				<div id="all-link-tables">
-					<!- script.js will loop through all-links/link-groups and generate tables here ->
-					<div id="terminal">
-					</div>
+		<div class="window-content">
+			<div id="all-link-tables">
+				<!- script.js will loop through all-links/link-groups and generate tables here ->
+			</div>
+			<div class="all-links" style="visibility: hidden;">
+				<div id="username">Calvin.Smith.Dev</div>
+				<div id="devicename">Work-PC</div>
+				<div class="link-group" data-title="General">
+					<a href="http://stackoverflow.com/">Stack Overflow</a>
+					<a href="https://drive.google.com/drive/u/0/#">Google Drive</a>
+					<a href="https://calendar.google.com/calendar/render?pli=1">Google Calendar</a>
+					<a href="https://github.com/">Github</a>
 				</div>
-				<div class="all-links" style="visibility: hidden;">
-					<div id="username">Calvin.Smith.Dev</div>
-					<div id="devicename">Work-PC</div>
-					<div class="link-group" data-title="General">
-						<a href="http://stackoverflow.com/">Stack Overflow</a>
-						<a href="https://drive.google.com/drive/u/0/#">Google Drive</a>
-						<a href="https://calendar.google.com/calendar/render?pli=1">Google Calendar</a>
-						<a href="https://github.com/">Github</a>
-					</div>
-					<div class="link-group" data-title="Entertainment">
-						<a href="https://www.reddit.com/r/badcode">/r/badcode</a>
-						<a href="https://www.reddit.com/r/ProgrammerHumor/">/r/ProgrammerHumor</a>
-						<a href="https://www.reddit.com/r/unixporn/">/r/unixporn</a>
-						<a href="https://www.reddit.com/r/talesfromtechsupport/">/r/talesfromtechsupport</a>
-					</div>
-					<div class="link-group" data-title="Work">
-						<a href="http://intranet.nbcc.ca/">NBCC Intranet</a>
-						<a href="http://10.159.1.14/explorer/">Spatial VM Explorer</a>
-						<a href="http://10.157.4.4/ari">ARI Tracking Site</a>
-					</div>
+				<div class="link-group" data-title="Entertainment">
+					<a href="https://www.reddit.com/r/badcode">/r/badcode</a>
+					<a href="https://www.reddit.com/r/ProgrammerHumor/">/r/ProgrammerHumor</a>
+					<a href="https://www.reddit.com/r/unixporn/">/r/unixporn</a>
+					<a href="https://www.reddit.com/r/talesfromtechsupport/">/r/talesfromtechsupport</a>
+				</div>
+				<div class="link-group" data-title="Work">
+					<a href="http://www.google.com">Some Site</a>
+					<a href="http://www.google.com">Something Else</a>
+					<a href="http://www.google.com">Another Site</a>
 				</div>
 			</div>
-		</main>
+		</div>
 	</section>
-	<div class="prompt-shortcut i-prompt hidden js-open"></div>
 </body>
 
 </html>

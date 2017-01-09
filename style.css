@@ -14,7 +14,6 @@
 
 }
 
-
 html, body{
 	margin: 0;
 	padding: 0;
@@ -25,136 +24,86 @@ html, body{
 
 }
 
-
 *, *:before, *:after {
 	font-family: 'fira';
 	font-weight: lighter;
 	box-sizing:inherit;
 }
 
-.container {
-	width: 50%;
-	/*margin: 50px auto;*/
-	position: relative;
-	border: 1px orange;
+.window {
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* Container for entire buildable area */
+.window-content {
+	width: 100%;
+	padding: 15px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+/* Inherit the flexbox to window-content children. */
+.window-content * {
+	display: inherit;
+	align-content: inherit;
+	flex-wrap: inherit;
 }
 
 #all-link-tables {
-	width: 100%;
-	position: absolute;
-	top: 30%;
-}
-
-#terminal {
-	width: 100%;
-	position: absolute;
+	width: inherit;
 }
 
 dt  {
-    clear:left;
-    float:left;
     font-size:12px;
     line-height:26px;
     width:70px;
 }
 
 dd {
-    clear:right;
     font-size:12px;
     line-height:18px;
-    padding:4px 0 4px 40px;
 }
 
 .all-links {
-	padding: 20px 0px 20px 0px;
 	background: teal;
 }
 
 .link-group {
-	margin-bottom: 20px;
 	background: gold;
 }
 
 a:before {
 	content: '';
-	display: block;
-	padding-bottom: 5px;
 }
 
 a {
-text-decoration: none;
-}
-
-.ls-table {
-	width: 100%;
-	table-layout: fixed;
-	border-collapse: collapse;
-	display: block;
-	padding-bottom: 25px;
+	text-decoration: none;
 }
 
 td {
     padding: 1px;
-    text-align: left;
+
   }
 
-.row-permissions {
-	color: #c678dd;
-	text-align: left;
-}
-
-.row-links {
-  	color: #56b6c2;
-	padding-left: 10px;
-	text-align: right;
-}
-
-.row-user {
-  	color: #d19a66;
-	padding-left: 10px;
-	text-align: left;
-}
-
-.row-group {
-  	color: #e06c75;
-	padding-left: 10px;
-	text-align: left;
-}
-
-.row-filesize {
-  	color: #56b6c2;
-	padding-left: 10px;
-	text-align: right;
-}
-
-.row-date {
-   	color: #98c379;
-	padding-left: 10px;
-	text-align: left;
-}
-
-.row-name {
-	padding-left: 10px;
-	text-align: left;
-}
-
-.ls-header {
-	padding-bottom: 8px;
-}
-
-.ls-link {
-  color: #d19a66;
-
-}
-
-.ls-command-float {
-	display: inline-block;
-	width: auto;
-	padding-bottom: 10px;
-}
-
+/*
+**
+	The shell prompt line
+**
+*/
 .ls-command {
 	width: 100%;
+	padding-bottom: 7px;
+}
+
+
+.ls-command-bracket-open {
+  	color: #d19a66;
+	padding-right: 0.4em;
 }
 
 .ls-command-username {
@@ -162,24 +111,140 @@ td {
 }
 
 .ls-command-at {
-
+	padding-left: 0.25em;
+	padding-right: 0.25em;
 }
 
 .ls-command-devicename {
-  color: #61afef;
+  	color: #61afef;
+}
+
+.ls-command-bracket-close {
+  	color: #d19a66;
+	padding-left: 0.4em;
+}
+
+.ls-command-prompt {
+  	color: #d19a66;
+	padding-left: 0.3em;
 }
 
 .ls-command-ls {
-	padding-left: 10px;
    	color: #98c379;
+	padding-left: 0.8em;
+}
+
+.ls-command-ls-switches {
+   	color: #98c379;
+	padding-left: 0.5em;
 }
 
 .ls-command-path {
- padding-left: 10px;
-  color: #d19a66;
+	color: #d19a66;
+	padding-left: 0.8em;
 }
 
 .ls-command-grouptitle {
   	color: #e5c07b;
+	padding-left: 0.15em;
 }
 
+.cursor {
+	color: white;
+	width: 15px;
+  	animation: blink 1.5s steps(1) infinite;
+}
+
+/*
+**
+	The first line returned after the ls command
+**
+*/
+.ls-header {
+	width:100%;
+	padding-bottom: 7px;
+}
+
+
+/*
+**
+	The tables with links
+**
+*/
+.ls-table {
+	width: 100%;
+	padding-bottom: 25px;
+}
+
+/* 
+	The layout uses Flex boxes arranged left-to-right, top-to-bottom and wraps at the end of the line.
+	By setting tr to 100% width, it guarantees a line wrap after each element in this table
+*/
+tr {
+	width: 100%;
+}
+
+
+.row-permissions {
+	color: #c678dd;
+	text-align: left;
+	width: 100px;
+}
+
+.row-links {
+  	color: #56b6c2;
+	text-align: left;
+	width: 50px;
+}
+
+.row-user {
+  	color: #d19a66;
+	text-align: left;
+	width: 50px;
+}
+
+.row-group {
+  	color: #e06c75;
+	text-align: left;
+	width: 60px;
+}
+
+.row-filesize {
+  	color: #56b6c2;
+	text-align: right;
+	width: 50px;
+}
+
+.row-date {
+   	color: #98c379;
+	text-align: left;
+	width: 100px;
+}
+
+.row-name {
+	text-align: left;
+}
+
+.ls-link {
+  color: #d19a66;
+}
+
+@keyframes blink {
+	50% {
+		color: transparent;
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		transform: translateY(-1000px);
+		}
+
+	60% {
+		transform: translateY(200px);
+		}
+
+	100% {
+		transform: translateY(0px);
+		}
+}

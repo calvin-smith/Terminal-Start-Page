@@ -7,28 +7,7 @@ $(document).ready(function () {
 
         var groupTitle = $(this).data('title');
 
-        // Prompt and ls command
-        $("#all-link-tables").append(
-            "<div class='ls-command'>" +
-            "<div class='ls-command-username ls-command-float'>" +
-            userName +
-            "</div>" +
-            "<div class='ls-command-at ls-command-float'>" +
-            "@" +
-            "</div>" +
-            "<div class='ls-command-devicename ls-command-float'>" +
-            deviceName +
-            "</div>" +
-            "<div class='ls-command-ls ls-command-float'>" +
-            " ls -al" +
-            "</div>" +
-            "<div class='ls-command-path ls-command-float'>" +
-            " ~/" +
-            "</div>" +
-            "<div class='ls-command-grouptitle ls-command-float'>" +
-            groupTitle +
-            "</div>" +
-            "</div>");
+        generateLSCommand (userName, deviceName, groupTitle, false);
 
         // ls header line with Total #
         $("#all-link-tables").append("<div class='ls-header'>Total " + $(this).children('a').length + "</div>");
@@ -127,6 +106,7 @@ $(document).ready(function () {
 
     });
 
+    generateLSCommand (userName, deviceName, "", true);
 
 });
 
@@ -205,4 +185,47 @@ function getExtension() {
 
     output = extensionList[Math.floor(Math.random() * extensionList.length)];
     return output;
+}
+
+function generateLSCommand (userName, deviceName, groupTitle, addCursor) {
+    
+    var cursorHtml = "";
+    if (addCursor) {
+        cursorHtml = "<div class='cursor'>|</div>";
+    }
+    // Prompt and ls command
+    $("#all-link-tables").append(
+        "<div class='ls-command'>" +
+        "<div class='ls-command-bracket-open ls-command-all'>" +
+        "[" +
+        "</div>" +
+        "<div class='ls-command-username ls-command-all'>" +
+        userName +
+        "</div>" +
+        "<div class='ls-command-at ls-command-all'>" +
+        "@" +
+        "</div>" +
+        "<div class='ls-command-devicename ls-command-all'>" +
+        deviceName +
+        "</div>" +
+        "<div class='ls-command-bracket-close ls-command-all'>" +
+        "]" +
+        "</div>" +
+        "<div class='ls-command-prompt ls-command-all'>" +
+        "$" +
+        "</div>" +
+        "<div class='ls-command-ls ls-command-all'>" +
+        " ls" +
+        "</div>" +
+        "<div class='ls-command-ls-switches ls-command-all'>" +
+        "-al" +
+        "</div>" +
+        "<div class='ls-command-path ls-command-all'>" +
+        " ~/" +
+        "</div>" +
+        "<div class='ls-command-grouptitle ls-command-all'>" +
+        groupTitle +
+        "</div>" +
+        cursorHtml +
+        "</div>");
 }

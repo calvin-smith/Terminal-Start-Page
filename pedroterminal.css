@@ -17,13 +17,12 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #555;
-  /*background: url("https://d13yacurqjgara.cloudfront.net/users/43762/screenshots/1438974/ng-colab-space_night.gif");*/
   background-size: cover;
   overflow: hidden;
 }
 .window {
   width: 50%;
-  height: 50%;
+  height: auto;
   background-color: rgba(37, 37, 37, 0.85);
   border: 1px solid #c9c9c9;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
@@ -39,9 +38,6 @@ body {
 .window.window--minimized {
   height: 25px;
   width: 180px;
-}
-.window.window--minimized .window-content {
-  display: none;
 }
 .window.window--destroyed {
   opacity: 0;
