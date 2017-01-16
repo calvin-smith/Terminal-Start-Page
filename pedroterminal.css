@@ -49,6 +49,7 @@ body {
   height: 25px;
 }
 .window-controls {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,9 +74,10 @@ body {
   background-color: #ccc;
 }
 .control-item.control-close {
+  font-family: inherit;
   font-size: 20px;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 30px;
 }
 .control-item.control-close:hover {
   background-color: #ec6060;
