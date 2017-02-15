@@ -1,6 +1,5 @@
 # Terminal-Start-Page
-
-![Terminal-Start-Page-Screenshot](http://i.imgur.com/5Z484Aq.jpg)
+<video src="https://calvin-smith.github.io/Hosting/Terminal-Start-Page/Demo.15.02.2017.mp4" width="320" height="200" controls preload loop></video>
 
 > A terminal-like start page.
 
