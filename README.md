@@ -3,7 +3,7 @@
 
 <img src="https://calvin-smith.github.io/Hosting/Terminal-Start-Page/Demo.gif">
 
-[See the page in action!](http://ricostacruz.com)
+[See the page in action!](https://calvin-smith.github.io/Hosting/Terminal-Start-Page/)
 
 > A terminal-like start page.
 
