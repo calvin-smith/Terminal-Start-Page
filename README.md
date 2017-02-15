@@ -1,5 +1,8 @@
 # Terminal-Start-Page
-<video src="https://calvin-smith.github.io/Hosting/Terminal-Start-Page/Demo.15.02.2017.mp4" width="320" height="200" controls preload loop></video>
+
+
+<img src="https://calvin-smith.github.io/Hosting/Terminal-Start-Page/Demo.gif">
+
 
 > A terminal-like start page.
 
