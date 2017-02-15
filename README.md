@@ -3,6 +3,7 @@
 
 <img src="https://calvin-smith.github.io/Hosting/Terminal-Start-Page/Demo.gif">
 
+[See the page in action!](http://ricostacruz.com)
 
 > A terminal-like start page.
 
@@ -14,4 +15,4 @@
 
 ## Notes
 
-Code has been written in a verbose and explicit manner to allow those who may not be famaliar with JavaScript, HTML and CSS to make customizations more easily.
+Code has been written in a verbose and explicit manner to allow those who may not be famaliar with JavaScript, HTML and CSS to make customizations to colors layout more easily.
